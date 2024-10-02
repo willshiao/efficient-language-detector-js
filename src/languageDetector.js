@@ -324,4 +324,4 @@ function info() {
   }
 }
 
-export { eld };
+export default { eld };

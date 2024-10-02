@@ -12,7 +12,7 @@ import { isoLanguages } from './isoLanguages.js'
 import { LanguageResult } from './LanguageResult.js'
 import { saveLanguageSubset } from './saveLanguageSubset.dev.js'
 
-await loadNgrams('ngramsM60.js')
+loadNgrams()
 
 // Project is ES2015
 const eld = (function () {

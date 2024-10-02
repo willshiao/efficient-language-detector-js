@@ -6,7 +6,7 @@ Package npmjs.com/package/eld
 */
 
 import { avgScore } from './avgScore.js'
-// import { ngramsData } from "./ngrams/ngramsM60.js"
+import { ngramsData } from "./ngrams/ngramsM60.js"
 
 export const languageData = {
   langCodes: {}, langScore: [], ngrams: {}, type: '', avgScore: avgScore
@@ -16,13 +16,13 @@ export const languageData = {
  * @param {string} file File inside /ngrams/, with ELD ngrams data format
  * @returns {boolean|undefined} true if file was loaded
  */
-export async function loadNgrams(file) {
-  return await import('./ngrams/' + file ).then((module) => {
-    setNgrams(module.ngramsData)
+export function loadNgrams(file) {
+//  return import('./ngrams/' + file ).then((module) => {
+    setNgrams(ngramsData)
     if (languageData.type) {
       return true
     }
-  })
+//  })
 }
 // setNgrams(ngramsData) // Used to create minified files with import { ngramsData }
 
